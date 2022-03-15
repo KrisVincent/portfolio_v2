@@ -10,12 +10,12 @@ function about() {
 
       <div className={s.txt_container}>
         <h4>
-          I am a{" "}
+          I am a
           <span style={{ fontSize: "1.7em" }}>
             Computer Engineering Student
-          </span>{" "}
+          </span>
           <span>
-            who fell inlove with{" "}
+            who fell inlove with
             <span style={{ color: "#00C2CB", fontSize: "1.4em" }}>
               Software
             </span>
