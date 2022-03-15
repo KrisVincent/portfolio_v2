@@ -1,0 +1,20 @@
+.img_container {
+  overflow: hidden;
+  position: relative;
+}
+
+.img_container span {
+  transform: translate(45vw);
+}
+
+@media only screen and (max-width: 992px) {
+  .img_container span {
+    transform: translate(35vw);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img_container {
+    display: none;
+  }
+}
