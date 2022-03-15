@@ -9,7 +9,7 @@ function ProjectContainer({ imgSrc, title, description, projectLink, bgColor }) 
           <h4>{title}</h4>
         </div>
         <p>{description}</p>
-        <a className={s.try} href={projectLink} target='_blank'>Click to try</a>
+        <a className={s.try} href={projectLink} target='_blank' rel="noreferrer">Click to try</a>
       </div>
       <div className={s.img_container}>
         <img src={imgSrc} />
