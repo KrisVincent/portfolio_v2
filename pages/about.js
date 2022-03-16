@@ -23,7 +23,7 @@ function about() {
             scratch.
           </span>
           <span style={{ color: "#00C2CB" }}>
-            {`When I donn't have assignments, I usually code and when I have, I
+            {`When I don't have assignments, I usually code and when I have, I
             still code.`}
           </span>
           <br></br>

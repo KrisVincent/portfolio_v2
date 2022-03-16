@@ -12,12 +12,13 @@ body {
   /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 
   font-family: "Righteous", cursive;
-  background-color: #121212;
-  color: #fff;
+
 }
 
 body {
   overflow-x: hidden;
+  background-color: #121212;
+  color: #fff;
 }
 
 a {
