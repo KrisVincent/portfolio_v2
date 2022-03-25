@@ -43,3 +43,31 @@
   /* font-size: 3em; */
   line-height: 1em;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  /* .About { */
+      /* height: 100vh; */
+      /* line-height: normal;
+      position: static;
+      height: auto; */
+  /* } */
+
+  .txt_container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    padding: 1em;
+  }
+
+  .txt_container h4 {
+    line-height: 1.2em;
+  }
+
+
+  .img_container {
+      display: none;
+  }
+}
