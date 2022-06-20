@@ -1,7 +1,7 @@
 import React from "react";
 
 function NewLineText({ text }) {
-  const newText = text.split("\n").map((str) => <p>{str}</p>);
+  const newText = text.split("\n").map((str, index) => <p key={index}>{str}</p>);
   return newText;
 }
 

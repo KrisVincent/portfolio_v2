@@ -66,8 +66,8 @@ function ProjectContainer({
         <div className={s.logo_section}>
           <p>Technology Used: &nbsp;&nbsp;</p>
           <div className={s.logo_container}>
-            {logoSrcs.map((logo) => (
-              <div className={s.logoItemContainer}>
+            {logoSrcs.map((logo, index) => (
+              <div key={index} className={s.logoItemContainer}>
                 <img src={logo}></img>
               </div>
             ))}
