@@ -5,7 +5,7 @@ import s from "../styles/MyPic.module.css";
 function MyPic() {
   return (
     <div className={s.img_container}>
-      <Image src={"/assets/images/heremyas.png"} width={700} height={700} />
+      <Image src={"/assets/images/heremyas.png"} width={660} height={600} />
     </div>
   );
 }

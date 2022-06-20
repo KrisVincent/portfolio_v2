@@ -6,12 +6,34 @@
 
 .texts_container {
     width: 800px;
-    margin: 50px;
+    margin: 50px 25px 50px 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.logoItemContainer{
+    height: 35px;
+    margin: 0 3px;
+}
+
+.logoItemContainer img {
+    height: 100%;
+}
+
+.logo_section{
+    display: flex;
+    align-items: center;
 }
 
 .img_container {
     width: 500px;
-    margin: 50px;
+    margin: 50px 10vw 50px 25px;
 }
 
 .img_container img {
