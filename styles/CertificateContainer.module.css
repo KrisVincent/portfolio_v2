@@ -1,0 +1,43 @@
+.CertificateContainer {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.texts_container {
+  width: 800px;
+  margin: 50px 25px 50px 10vw;
+}
+
+.img_container {
+  width: 500px;
+  margin: 50px 10vw 50px 25px;
+}
+
+.img_container img {
+  width: 100%;
+}
+
+.try {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .CertificateContainer {
+    flex-direction: column-reverse;
+    padding: 1px;
+  }
+
+  .texts_container {
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+  }
+
+  .img_container {
+    width: 100%;
+    margin: 0;
+    padding: 0.5em;
+  }
+}

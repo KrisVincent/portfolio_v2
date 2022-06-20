@@ -1,0 +1,63 @@
+.Internship {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  /* display: flex; */
+  position: relative;
+}
+
+.txt_container {
+  text-align: left;
+  position: absolute;
+  top: 30%;
+  left: 10vw;
+  text-transform: uppercase;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+
+  animation-name: animateTxt;
+  animation-duration: 1s;
+}
+
+@keyframes animateTxt {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 100;
+    transform: translateX(0);
+  }
+}
+
+.txt_container h5 {
+  font-size: 1.5em;
+}
+
+.txt_container h1 {
+  /* font-size: 4em; */
+  line-height: 0.9em;
+}
+
+.txt_container h3 {
+  /* font-size: 3em; */
+  line-height: 1.3em;
+}
+
+@media only screen and (max-width: 768px) {
+  .texts_container {
+    height: 100vh;
+  }
+  .txt_container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    padding: 1em;
+  }
+
+  .txt_container h4 {
+    line-height: 1.2em;
+  } 
+}
