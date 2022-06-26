@@ -1,11 +1,25 @@
 .img_container {
   overflow: hidden;
   position: relative;
+  height: 92vh;
+  /* background-color: rebeccapurple; */
+  
+  
 }
 
-.img_container span {
-  transform: translate(45vw);
+.img_container div {
+  background-color: aquamarine;
 }
+
+.img_container img { 
+  /* position: absolute!important; */
+  /* transform: translate(45vw, 18vh); */
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  right: 5vw;
+}
+
 
 @media only screen and (max-width: 992px) {
   .img_container span {
