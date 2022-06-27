@@ -1,12 +1,14 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "../styles/Skills.module.css";
 import Navbar from "../components/Navbar";
 import MyPic from "../components/MyPic";
 import ScrollDown from "../components/ScrollDown";
 import SkillContainer from "../components/SkillContainer";
+// import ProgressBar from 'react-animated-progress-bar';
 
 function skills() {
+
   const tech_logos = "/assets/images/tech_logos";
   return (
     <div className={s.Skills}>
@@ -31,6 +33,15 @@ function skills() {
         <ScrollDown />
       </div>
       <h3>SOFTWARE</h3>
+
+      {/* {RAPB ? console.log("hi"): <RAPB />} */}
+      {/* <NextNProgress
+        color="#29D"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={3}
+        showOnShallow={true}
+      /> */}
 
       <SkillContainer
         title="HTML"
