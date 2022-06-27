@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar currentPage={1} />
 
       <div className={s.txt_container}>
-        <h5>&nbsp;&nbsp;Hello I am,</h5>
+        <h5>&nbsp;&nbsp;Hello, I am</h5>
         <h1>Jeremiah Valencia</h1>
         <br></br>
         <br></br>
