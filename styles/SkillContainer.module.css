@@ -43,6 +43,12 @@
         margin: 5vw;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .img_container {
+        height: 50px;
+    }
+}
 /* 
 @media only screen and (max-width: 768px) {
     .SkillContainer {
