@@ -1,0 +1,35 @@
+.MyPicMini {
+    display: none;
+    height: 250px;
+    width: 100vw;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+}
+.img_container img{
+    width: 100%;
+}
+
+.img_container img {
+    transform: scale(1.5) translateY(30px);
+
+}
+
+.img_container {
+    overflow: hidden;
+    width: 200px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20%;
+}
+
+.texts li {
+    margin: -10px;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 992px) {
+    .MyPicMini {
+        display: flex;
+    }
+}

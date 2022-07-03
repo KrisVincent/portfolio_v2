@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
     //   : null;
     if (typeof document !== undefined) {
       require("bootstrap/dist/js/bootstrap");
+      
     }
   }, []);
   return ( 

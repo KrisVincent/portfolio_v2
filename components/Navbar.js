@@ -66,6 +66,14 @@ function Navbar({ currentPage }) {
                 </a>
               </Link>
             </li>
+
+ <li className="nav-item">
+              <Link href={"/resume"}>
+                <a className={`nav-link ${currentPage === 7 ? "active" : ""}`}>
+                  Resume
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
