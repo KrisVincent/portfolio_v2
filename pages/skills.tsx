@@ -1,5 +1,4 @@
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
 import s from "../styles/Skills.module.css";
 import Navbar from "../components/Navbar";
 import MyPic from "../components/MyPic";
@@ -9,7 +8,6 @@ import SkillBar from "../components/SkillBar";
 // import SkillBar from "../components/SkillBar";
 
 function skills() {
-  const [wasDismissed, setWasDismissed] = useState(false);
 
   const tech_logos = "/assets/images/tech_logos";
   return (
