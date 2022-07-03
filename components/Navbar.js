@@ -52,10 +52,25 @@ function Navbar({ currentPage }) {
                 </a>
               </Link>
             </li>
-  <li className="nav-item">
+            <li className="nav-item">
               <Link href={"/internship"}>
                 <a className={`nav-link ${currentPage === 5 ? "active" : ""}`}>
                   Internship
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href={"/skills"}>
+                <a className={`nav-link ${currentPage === 6 ? "active" : ""}`}>
+                  Skills
+                </a>
+              </Link>
+            </li>
+
+ <li className="nav-item">
+              <Link href={"/resume"}>
+                <a className={`nav-link ${currentPage === 7 ? "active" : ""}`}>
+                  Resume
                 </a>
               </Link>
             </li>

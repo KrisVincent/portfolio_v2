@@ -1,20 +1,35 @@
 .img_container {
   overflow: hidden;
   position: relative;
+  height: 92vh;
+  /* background-color: rebeccapurple; */
+  z-index: -1; 
+  
 }
 
-.img_container span {
-  transform: translate(45vw);
+.img_container div {
+  background-color: aquamarine;
+}
+
+.img_container img { 
+  /* position: absolute!important; */
+  /* transform: translate(45vw, 18vh); */
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  right: 5vw;
 }
 
 @media only screen and (max-width: 992px) {
-  .img_container span {
-    transform: translate(35vw);
-  }
+  .img_container img {
+      right: 0;
+   }
 }
 
-@media only screen and (max-width: 768px) {
-  .img_container {
-    display: none;
+
+@media only screen and (max-width: 992px) {
+  .img_container  {
+
+   display: none;
   }
 }

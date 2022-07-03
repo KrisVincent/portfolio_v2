@@ -56,6 +56,17 @@
         margin: 0;
         padding: 2em;
     }
+
+    .logo_container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .logoItemContainer{
+        height: 30px;
+        margin: 3px;
+    }
     
 
     .img_container {

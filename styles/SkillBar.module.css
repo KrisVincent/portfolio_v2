@@ -1,0 +1,24 @@
+.SkillBar {
+  height: 30px;
+  width: 450px;
+
+  border: 1px white solid;
+  /* margin: 0 3em; */
+}
+
+.bar {
+  height: 100%;
+  background-color: brown;
+}
+
+@media only screen and (max-width: 992px) {
+  .SkillBar {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .SkillBar {
+    height: 20px;
+  }
+}
