@@ -44,7 +44,19 @@
   line-height: 1em;
 }
 
-
+@media only screen and (max-width: 992px) {
+  .txt_container {
+    position: static;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    top: 0;
+    left: 0%;
+    padding-left: 5vw;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   /* .About { */
@@ -62,17 +74,7 @@
     padding: 1em;
   } */
 
-  .txt_container {
-    position: static;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90vw;
-    top: 0;
-    left: 0%;
-    padding-left: 5vw;
-  }
+
 
   .txt_container h4 {
     line-height: 1.2em;
