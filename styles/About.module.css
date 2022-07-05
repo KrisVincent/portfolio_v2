@@ -59,6 +59,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
   /* .About { */
       /* height: 100vh; */
       /* line-height: normal;
@@ -74,7 +75,9 @@
     padding: 1em;
   } */
 
-
+.txt_container {
+  height: 90vh;
+}
 
   .txt_container h4 {
     line-height: 1.2em;
