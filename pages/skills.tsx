@@ -100,6 +100,12 @@ function skills() {
         imgSrc={`${tech_logos}/bootstrap.png`}
         bgColor="#090d1f"
       />
+    <SkillContainer
+        title="Git"
+        skillBar={<SkillBar percentage="55%" bgColor="#F05033" />}
+        imgSrc={`${tech_logos}/git.png`}
+        bgColor="#090d1f"
+      />
       <SkillContainer
         title="Heroku"
         skillBar={<SkillBar percentage="40%" bgColor="#8062A7" />}
