@@ -76,6 +76,12 @@ function skills() {
         bgColor="#090d1f"
       />
       <SkillContainer
+        title="Node JS"
+        skillBar={<SkillBar percentage="45%" bgColor="#8CC84B" />}
+        imgSrc={`${tech_logos}/node.png`}
+        bgColor="#090d1f"
+      />
+      <SkillContainer
         title="Python"
         skillBar={<SkillBar percentage="70%" bgColor="#FFD041" />}
         imgSrc={`${tech_logos}/python.png`}
@@ -150,6 +156,24 @@ function skills() {
         bgColor="#090d1f"
       />
       <SkillContainer
+        title="Java"
+        skillBar={<SkillBar percentage="45%" bgColor="#223C5B" />}
+        imgSrc={`${tech_logos}/java.png`}
+        bgColor="#090d1f"
+      />
+      <SkillContainer
+        title="C++"
+        skillBar={<SkillBar percentage="40%" bgColor="#00599C" />}
+        imgSrc={`${tech_logos}/c++.png`}
+        bgColor="#090d1f"
+      />
+      <SkillContainer
+        title="C"
+        skillBar={<SkillBar percentage="35%" bgColor="#649AD2" />}
+        imgSrc={`${tech_logos}/c.png`}
+        bgColor="#090d1f"
+      />
+      <SkillContainer
         title="MySQL"
         skillBar={<SkillBar percentage="65%" bgColor="#F56202" />}
         imgSrc={`${tech_logos}/mysql.png`}
@@ -161,6 +185,7 @@ function skills() {
         imgSrc={`${tech_logos}/postgresql.png`}
         bgColor="#090d1f"
       />
+      
       
     </div>
   );
