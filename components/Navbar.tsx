@@ -93,7 +93,7 @@ function Navbar({ currentPage }) {
                 </span>
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link href={"/youtube"}>
                 <span
                   className={`nav-link ${currentPage === 8 ? "active" : ""}`}
@@ -101,7 +101,7 @@ function Navbar({ currentPage }) {
                   Youtube
                 </span>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
