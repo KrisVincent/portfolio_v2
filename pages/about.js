@@ -16,8 +16,7 @@ function about() {
 
       <div className={s.txt_container}>
         <h4>
-          I am a soon-to-be<br></br>
-          <span style={{ fontSize: "1.7em" }}> Computer Engineer</span>
+          I am a<span style={{ fontSize: "1.7em" }}> Computer Engineer</span>
           <span>
             {" "}
             who fell inlove with

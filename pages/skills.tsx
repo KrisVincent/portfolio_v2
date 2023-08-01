@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Head } from "../components";
 import s from "../styles/Skills.module.css";
 import Navbar from "../components/Navbar";
 import MyPic from "../components/MyPic";
@@ -8,15 +8,14 @@ import SkillBar from "../components/SkillBar";
 // import SkillBar from "../components/SkillBar";
 
 function skills() {
-
   const tech_logos = "/assets/images/tech_logos";
   return (
     <div className={s.Skills}>
-      <Head>
-        <title>Skills | Jeremiah Valencia</title>
-        <meta name="description" content="Skills Jeremiah Valencia" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Head
+        title="Skills | Jeremiah Valencia"
+        meta={{ content: "Skills Jeremiah Valencia" }}
+      />
+
       <Navbar currentPage={6} />
       <div className={s.texts_container}>
         <div className={s.txt_container}>
@@ -106,7 +105,7 @@ function skills() {
         imgSrc={`${tech_logos}/bootstrap.png`}
         bgColor="#090d1f"
       />
-    <SkillContainer
+      <SkillContainer
         title="Git"
         skillBar={<SkillBar percentage="55%" bgColor="#F05033" />}
         imgSrc={`${tech_logos}/git.png`}
@@ -124,14 +123,13 @@ function skills() {
         imgSrc={`${tech_logos}/laravel.png`}
         bgColor="#090d1f"
       />
-       <SkillContainer
+      <SkillContainer
         title="Dart"
         skillBar={<SkillBar percentage="40%" bgColor="#0082C8" />}
         imgSrc={`${tech_logos}/dart.png`}
         bgColor="#090d1f"
-
       />
-       <SkillContainer
+      <SkillContainer
         title="Flutter"
         skillBar={<SkillBar percentage="55%" bgColor="#55C5F8" />}
         imgSrc={`${tech_logos}/flutter.png`}
@@ -185,8 +183,6 @@ function skills() {
         imgSrc={`${tech_logos}/postgresql.png`}
         bgColor="#090d1f"
       />
-      
-      
     </div>
   );
 }

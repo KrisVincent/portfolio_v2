@@ -7,7 +7,6 @@ import s from "../styles/Resume.module.css";
 
 export default function HomePage() {
   const viewer = useRef(null);
-
   useEffect(() => {
     import("@pdftron/webviewer").then(() => {
       WebViewer(
@@ -19,9 +18,8 @@ export default function HomePage() {
       ).then((instance) => {
         // const { docViewer } = instance;
         const { annotationManager } = instance.Core;
-       
-      
-        instance.UI.setTheme('dark');
+
+        instance.UI.setTheme("dark");
         annotationManager.setReadOnly(true);
       });
     });
@@ -39,9 +37,7 @@ export default function HomePage() {
         <div className={s.txt_container}>
           <h4>
             My{" "}
-            <span style={{ fontSize: "1.7em", color: "#00c2cb" }}>
-              Resume
-            </span>
+            <span style={{ fontSize: "1.7em", color: "#00c2cb" }}>Resume</span>
             <br></br>
             <br></br>
             <span style={{ fontSize: "1.3em" }}>View Or download below</span>
