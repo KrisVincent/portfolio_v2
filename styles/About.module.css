@@ -47,7 +47,8 @@
 @media only screen and (max-width: 992px) {
   .txt_container {
     position: static;
-    /* height: 100vh; */
+    /* Check if there is no error or problem in the UI */
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,10 +60,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   /* .About { */
-      /* height: 100vh; */
-      /* line-height: normal;
+  /* height: 100vh; */
+  /* line-height: normal;
       position: static;
       height: auto; */
   /* } */
@@ -75,15 +75,15 @@
     padding: 1em;
   } */
 
-.txt_container {
-  height: 90vh;
-}
+  .txt_container {
+    height: 90vh;
+  }
 
   .txt_container h4 {
     line-height: 1.2em;
   }
 
   .img_container {
-      display: none;
-  } 
+    display: none;
+  }
 }

@@ -7,7 +7,9 @@ function MyPic() {
     <div className={s.img_container}>
       {/* <div className={s.child_img_container}> */}
       {/* <Image src={"/assets/images/heremyas.png"} width={660} height={600} /> */}
-        <img src="/assets/images/heremyas.png"></img>
+      <div>
+        <img src="/assets/images/heremyas.png" />
+      </div>
       {/* </div> */}
     </div>
   );
