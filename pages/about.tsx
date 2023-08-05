@@ -3,6 +3,7 @@ import React from "react";
 import MyPic from "../components/MyPic";
 import Navbar from "../components/Navbar";
 import s from "../styles/About.module.css";
+import { NAVBAR_ITEMS } from "../enums";
 
 function about() {
   return (
@@ -12,7 +13,7 @@ function about() {
         <meta name="description" content="About Jeremiah Valencia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar currentPage={2} />
+      <Navbar active={NAVBAR_ITEMS.About} />
 
       <div className={s.txt_container}>
         <h4>

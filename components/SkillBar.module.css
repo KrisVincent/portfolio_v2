@@ -1,6 +1,6 @@
 .SkillBar {
   height: 30px;
-  width: 450px;
+  width: 100%;
 
   border: 1px white solid;
   /* margin: 0 3em; */

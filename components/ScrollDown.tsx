@@ -1,8 +1,9 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 
-const scrollDownContainerStyle = {
+const scrollDownContainerStyle: CSSProperties = {
   position: "absolute",
-  textAlign: "center",
+  display: "flex",
+  justifyContent: "center",
   bottom: "3vh",
   left: 0,
   right: 0,

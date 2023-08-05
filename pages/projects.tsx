@@ -5,23 +5,29 @@ import Navbar from "../components/Navbar";
 import ProjectContainer from "../components/ProjectContainer";
 import ScrollDown from "../components/ScrollDown";
 import s from "../styles/Projects.module.css";
+import { NAVBAR_ITEMS } from "../enums";
+import capitalize from "../utils/capitalize";
 
 function projects() {
   const tech_logos = "/assets/images/tech_logos";
   return (
     <div className={s.Projects}>
-
       <Head>
-        <title>Projects | Jeremiah Valencia</title>
+        <title>{`${capitalize(
+          NAVBAR_ITEMS.Projects
+        )} | Jeremiah Valencia`}</title>
         <meta name="description" content="Projects Jeremiah Valencia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar currentPage={3} />
+      <Navbar active={NAVBAR_ITEMS.Projects} />
       <div className={s.texts_container}>
         <div className={s.txt_container}>
           <h4>
-            List of {" "}
-            <span style={{ fontSize: "1.7em" , color: "#00c2cb"}}>projects</span><span style={{fontSize: "1.7em"}}> i have proudly created</span>{" "}
+            List of{" "}
+            <span style={{ fontSize: "1.7em", color: "#00c2cb" }}>
+              projects
+            </span>
+            <span style={{ fontSize: "1.7em" }}> i have proudly created</span>{" "}
           </h4>
         </div>
         <MyPic />

@@ -45,7 +45,6 @@
   line-height: 1em;
 }
 
-
 @media only screen and (max-width: 992px) {
   .txt_container {
     position: static;
@@ -59,7 +58,6 @@
     padding-left: 5vw;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   .texts_container {
@@ -75,5 +73,5 @@
 
   .txt_container h4 {
     line-height: 1.2em;
-  } 
+  }
 }
