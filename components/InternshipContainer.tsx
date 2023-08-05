@@ -2,6 +2,16 @@ import React from "react";
 import s from "../styles/InternshipContainer.module.css";
 import NewLineText from "./NewLineText";
 
+type Props = {
+  imgSrc: string;
+  title: String;
+  description: String;
+  projectLink?: string;
+  bgColor: string;
+  subtitle: String;
+  sidetitle: String;
+};
+
 function InternshipContainer({
   imgSrc,
   title,
@@ -10,7 +20,7 @@ function InternshipContainer({
   bgColor,
   subtitle,
   sidetitle,
-}) {
+}: Props) {
   return (
     <div className={s.InternshipContainer} style={{ backgroundColor: bgColor }}>
       <div className={s.texts_container}>

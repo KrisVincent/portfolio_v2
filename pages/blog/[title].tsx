@@ -35,7 +35,6 @@ function Blog(blog: Blog) {
   return (
     <ChakraProvider>
       <Head title="{title} | heremyas" meta={{ content: "{title} heremyas" }} />
-      {console.log()}
     </ChakraProvider>
   );
 }

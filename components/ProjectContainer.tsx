@@ -2,6 +2,16 @@ import React from "react";
 import s from "../styles/ProjectContainer.module.css";
 import NewLineText from "./NewLineText";
 
+type Props = {
+  imgSrc: string;
+  title: String;
+  description: String;
+  projectLink?: string;
+  bgColor: string;
+  logoSrcs: Array<string>;
+  tutorialLink?: string;
+  sourceCodeLink?: string;
+};
 
 function ProjectContainer({
   imgSrc,
@@ -11,8 +21,8 @@ function ProjectContainer({
   bgColor,
   logoSrcs,
   tutorialLink,
-  sourceCodeLink
-}) {
+  sourceCodeLink,
+}: Props) {
   return (
     <div className={s.ProjectContainer} style={{ backgroundColor: bgColor }}>
       <div className={s.texts_container}>
@@ -21,7 +31,7 @@ function ProjectContainer({
             <h4>{title}</h4>
           </div>
           <NewLineText text={description} />
-          <div style={{display: 'flex', flexDirection: 'column'}}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
             {projectLink ? (
               <a
                 className={s.try}
@@ -59,8 +69,6 @@ function ProjectContainer({
             ) : (
               ""
             )}
-            
-
           </div>
         </div>
         <div className={s.logo_section}>
