@@ -5,6 +5,7 @@ import MyPic from "../components/MyPic";
 import Navbar from "../components/Navbar";
 import ScrollDown from "../components/ScrollDown";
 import s from "../styles/Internship.module.css";
+import { NAVBAR_ITEMS } from "../enums";
 
 const experiences = [];
 
@@ -16,7 +17,7 @@ function certificates() {
         <meta name="description" content="Internship Jeremiah Valencia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar currentPage={5} />
+      <Navbar active={NAVBAR_ITEMS.Experience} />
 
       <div className={s.texts_container}>
         <div className={s.txt_container}>

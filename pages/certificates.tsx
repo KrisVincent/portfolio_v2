@@ -5,25 +5,33 @@ import MyPic from "../components/MyPic";
 import Navbar from "../components/Navbar";
 import ScrollDown from "../components/ScrollDown";
 import s from "../styles/Certificates.module.css";
+import { NAVBAR_ITEMS } from "../enums";
 
 function certificates() {
   return (
     <div className={s.Certificates}>
-
       <Head>
         <title>Certificates | Jeremiah Valencia</title>
         <meta name="description" content="Certificates Jeremiah Valencia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar currentPage={4} />
+      <Navbar active={NAVBAR_ITEMS.Certificates} />
 
       <div className={s.texts_container}>
         <div className={s.txt_container}>
-          <h3>My <span style={{color: "#00c2cb", fontSize: "1.7em"}}>Certificates</span></h3>
+          <h3>
+            My{" "}
+            <span style={{ color: "#00c2cb", fontSize: "1.7em" }}>
+              Certificates
+            </span>
+          </h3>
           <br></br>
           <br></br>
           <br></br>
-          <h3><span style={{color: "#00c2cb", fontSize: "1.5em"}}>11</span> Seminars/Webinars Attended</h3>
+          <h3>
+            <span style={{ color: "#00c2cb", fontSize: "1.5em" }}>11</span>{" "}
+            Seminars/Webinars Attended
+          </h3>
         </div>
         <MyPic />
         <ScrollDown />

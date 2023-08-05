@@ -6,6 +6,7 @@ import MyPic from "../components/MyPic";
 import s from "../styles/Home.module.css";
 // import AnimatedText from "react-animated-text-content";
 import MyPicMini from "../components/MyPicMini";
+import { NAVBAR_ITEMS } from "../enums";
 
 export default function Home() {
   // MyPic.map((i) => console.log(i));
@@ -18,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar currentPage={1} />
+      <Navbar active={NAVBAR_ITEMS.Home} />
       <MyPicMini />
       <div className={s.txt_container}>
         <h5>&nbsp;&nbsp;Hello, I am</h5>

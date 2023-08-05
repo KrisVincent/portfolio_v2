@@ -1,53 +1,50 @@
 .SkillContainer {
-    /* min-height: 20vh; */
-    display: flex;
-    justify-content: space-between;
+  /* min-height: 20vh; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .texts_container {
-    width: 800px;
-    margin: 20px 25px 20px 25vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 800px;
+  margin: 20px 25px 20px 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo_container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-
-.logo_section{
-    display: flex;
-    align-items: center;
+.logo_section {
+  display: flex;
+  align-items: center;
 }
 
 .img_container {
-    height: 70px;
-    margin: 20px 25vw 20px 25px;
+  width: 90px;
+  margin: 20px 25vw 20px 25px;
 }
 
 .img_container img {
-    height: 100%;
+  width: 100%;
 }
 
-
-
 @media only screen and (max-width: 500px) {
-    .texts_container {
-        margin: 5vw;
-    }
+  .texts_container {
+    margin: 5vw;
+  }
 
-    .img_container {
-        margin: 5vw;
-    }
+  .img_container {
+    margin: 5vw;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-    .img_container {
-        height: 50px;
-    }
+  .img_container {
+    height: 50px;
+  }
 }
 /* 
 @media only screen and (max-width: 768px) {
@@ -70,4 +67,3 @@
     }
     
 } */
-

@@ -1,35 +1,30 @@
-import React from "react";
-import s from "../styles/SkillBar.module.css";
+import React, { useState } from "react";
+import s from "./SkillBar.module.css";
 import { motion, VariantLabels } from "framer-motion";
 
 interface SkillBarProps {
   percentage: VariantLabels;
-  bgColor: string
+  bgColor: string;
 }
 
-
-
 function SkillBar({ percentage, bgColor }: SkillBarProps) {
+  const [seen, setSeen] = useState(false);
+
   return (
     <div className={s.SkillBar}>
-      <motion.aside
-      style={{backgroundColor: bgColor}}
-      className={s.bar}
-      whileInView={{ width: percentage}}
-      initial={{ width: '0'}}
-      exit={{
-        // opacity: 0,
-        width: percentage,
-        // transition: { backgroundColor: { delay: 0 }, opacity: { delay: 0.1 } }
-      }}
-    
-      transition={{
-        from: '0%', duration: 1
-      }}
-
-    >
-
-    </motion.aside>
+      <motion.div
+        style={{ backgroundColor: bgColor }}
+        className={s.bar}
+        onViewportEnter={() => {
+          setSeen(true);
+        }}
+        initial={{ width: "0" }}
+        animate={{ width: seen ? percentage : 0 }}
+        transition={{
+          from: "0%",
+          duration: 1,
+        }}
+      ></motion.div>
     </div>
   );
 }

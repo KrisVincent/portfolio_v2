@@ -3,20 +3,110 @@ import s from "../styles/Skills.module.css";
 import Navbar from "../components/Navbar";
 import MyPic from "../components/MyPic";
 import ScrollDown from "../components/ScrollDown";
-import SkillContainer from "../components/SkillContainer";
 import SkillBar from "../components/SkillBar";
-// import SkillBar from "../components/SkillBar";
+import { NAVBAR_ITEMS } from "../enums";
+import capitalize from "../utils/capitalize";
+import { Stack } from "@chakra-ui/react";
+import SkillCard from "../components/data_display/SkillCard";
+import { Container } from "@chakra-ui/react";
+import SkillSet from "../models/skill";
+
+const tech_logos = "/assets/images/tech_logos";
+
+const skillSet: Array<SkillSet> = [
+  {
+    title: "HTML",
+    skillBar: <SkillBar percentage="90%" bgColor="#E44D26" />,
+    imgSrc: `${tech_logos}/html.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "CSS",
+    skillBar: <SkillBar percentage="85%" bgColor="#2965F1" />,
+    imgSrc: `${tech_logos}/css.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "JavaScript",
+    skillBar: <SkillBar percentage="80%" bgColor="#F0DB4F" />,
+    imgSrc: `${tech_logos}/javascript.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "React",
+    skillBar: <SkillBar percentage="70%" bgColor="#62DAFB" />,
+    imgSrc: `${tech_logos}/react.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "Next JS",
+    skillBar: <SkillBar percentage="60%" bgColor="#ffffff" />,
+    imgSrc: `${tech_logos}/next.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "Typescript",
+    skillBar: <SkillBar percentage="55%" bgColor="#007ACC" />,
+    imgSrc: `${tech_logos}/typescript.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "Python",
+    skillBar: <SkillBar percentage="70%" bgColor="#FFD041" />,
+    imgSrc: `${tech_logos}/python.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "Flask",
+    skillBar: <SkillBar percentage="65%" bgColor="#ffffff" />,
+    imgSrc: `${tech_logos}/flask.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "Bootstrap",
+    skillBar: <SkillBar percentage="80%" bgColor="#7611F6" />,
+    imgSrc: `${tech_logos}/bootstrap.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "Flutter",
+    skillBar: <SkillBar percentage="55%" bgColor="#55C5F8" />,
+    imgSrc: `${tech_logos}/flutter.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "Git",
+    skillBar: <SkillBar percentage="55%" bgColor="#F05033" />,
+    imgSrc: `${tech_logos}/git.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "API",
+    skillBar: <SkillBar percentage="57%" bgColor="#223C5B" />,
+    imgSrc: `${tech_logos}/api.png`,
+    bgColor: "#090d1f",
+  },
+  {
+    title: "MySQL",
+    skillBar: <SkillBar percentage="65%" bgColor="#F56202" />,
+    imgSrc: `${tech_logos}/mysql.png`,
+    bgColor: "#090d1f",
+  },
+];
 
 function skills() {
-  const tech_logos = "/assets/images/tech_logos";
   return (
     <div className={s.Skills}>
       <Head
-        title="Skills | Jeremiah Valencia"
-        meta={{ content: "Skills Jeremiah Valencia" }}
+        title={`${capitalize(NAVBAR_ITEMS.Skills)} | Jeremiah Valencia`}
+        meta={{
+          content: `${capitalize(
+            NAVBAR_ITEMS.Skills
+          )} Skills Jeremiah Valencia`,
+        }}
       />
 
-      <Navbar currentPage={6} />
+      <Navbar active={NAVBAR_ITEMS.Skills} />
       <div className={s.texts_container}>
         <div className={s.txt_container}>
           <h4>
@@ -31,158 +121,22 @@ function skills() {
         <MyPic />
         <ScrollDown />
       </div>
-      {/* <h3>SOFTWARE</h3> */}
-
-      {/* <SkillBar /> */}
-
-      <SkillContainer
-        title="HTML"
-        skillBar={<SkillBar percentage="90%" bgColor="#E44D26" />}
-        imgSrc={`${tech_logos}/html.png`}
-        bgColor="#090d1f"
-      />
-
-      <SkillContainer
-        title="CSS"
-        skillBar={<SkillBar percentage="85%" bgColor="#2965F1" />}
-        imgSrc={`${tech_logos}/css.png`}
-        bgColor="#090d1f"
-      />
-
-      <SkillContainer
-        title="JavaScript"
-        skillBar={<SkillBar percentage="80%" bgColor="#F0DB4F" />}
-        imgSrc={`${tech_logos}/javascript.png`}
-        bgColor="#090d1f"
-      />
-
-      <SkillContainer
-        title="React"
-        skillBar={<SkillBar percentage="70%" bgColor="#62DAFB" />}
-        imgSrc={`${tech_logos}/react.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Next JS"
-        skillBar={<SkillBar percentage="60%" bgColor="#ffffff" />}
-        imgSrc={`${tech_logos}/next.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Typescript"
-        skillBar={<SkillBar percentage="55%" bgColor="#007ACC" />}
-        imgSrc={`${tech_logos}/typescript.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Node JS"
-        skillBar={<SkillBar percentage="45%" bgColor="#8CC84B" />}
-        imgSrc={`${tech_logos}/node.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Python"
-        skillBar={<SkillBar percentage="70%" bgColor="#FFD041" />}
-        imgSrc={`${tech_logos}/python.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Django"
-        skillBar={<SkillBar percentage="40%" bgColor="#27AB78" />}
-        imgSrc={`${tech_logos}/django.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Flask"
-        skillBar={<SkillBar percentage="65%" bgColor="#ffffff" />}
-        imgSrc={`${tech_logos}/flask.png`}
-        bgColor="#090d1f"
-      />
-
-      <SkillContainer
-        title="Bootstrap"
-        skillBar={<SkillBar percentage="80%" bgColor="#7611F6" />}
-        imgSrc={`${tech_logos}/bootstrap.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Git"
-        skillBar={<SkillBar percentage="55%" bgColor="#F05033" />}
-        imgSrc={`${tech_logos}/git.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Heroku"
-        skillBar={<SkillBar percentage="40%" bgColor="#8062A7" />}
-        imgSrc={`${tech_logos}/heroku.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Laravel"
-        skillBar={<SkillBar percentage="50%" bgColor="#FF291A" />}
-        imgSrc={`${tech_logos}/laravel.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Dart"
-        skillBar={<SkillBar percentage="40%" bgColor="#0082C8" />}
-        imgSrc={`${tech_logos}/dart.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Flutter"
-        skillBar={<SkillBar percentage="55%" bgColor="#55C5F8" />}
-        imgSrc={`${tech_logos}/flutter.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="API"
-        skillBar={<SkillBar percentage="57%" bgColor="#223C5B" />}
-        imgSrc={`${tech_logos}/api.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="JSON"
-        skillBar={<SkillBar percentage="60%" bgColor="#ffffff" />}
-        imgSrc={`${tech_logos}/json.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="PHP"
-        skillBar={<SkillBar percentage="65%" bgColor="#777CB4" />}
-        imgSrc={`${tech_logos}/php.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="Java"
-        skillBar={<SkillBar percentage="45%" bgColor="#223C5B" />}
-        imgSrc={`${tech_logos}/java.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="C++"
-        skillBar={<SkillBar percentage="40%" bgColor="#00599C" />}
-        imgSrc={`${tech_logos}/c++.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="C"
-        skillBar={<SkillBar percentage="35%" bgColor="#649AD2" />}
-        imgSrc={`${tech_logos}/c.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="MySQL"
-        skillBar={<SkillBar percentage="65%" bgColor="#F56202" />}
-        imgSrc={`${tech_logos}/mysql.png`}
-        bgColor="#090d1f"
-      />
-      <SkillContainer
-        title="PostgreSQL"
-        skillBar={<SkillBar percentage="50%" bgColor="#223C5B" />}
-        imgSrc={`${tech_logos}/postgresql.png`}
-        bgColor="#090d1f"
-      />
+      <Container maxW="2xl" centerContent>
+        <Stack
+          width={{ lg: "900px", md: "700px", sm: "400px", base: "300px" }}
+          spacing="4"
+        >
+          {skillSet.map((skill, index) => (
+            <SkillCard
+              key={index}
+              title={skill.title}
+              bgColor={skill.bgColor}
+              imgSrc={skill.imgSrc}
+              skillBar={skill.skillBar}
+            />
+          ))}
+        </Stack>
+      </Container>
     </div>
   );
 }
