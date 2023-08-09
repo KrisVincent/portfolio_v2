@@ -15,19 +15,6 @@
   width: 550px;
   display: flex;
   flex-wrap: wrap;
-  animation-name: animateTxt;
-  animation-duration: 1s;
-}
-
-@keyframes animateTxt {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 100;
-    transform: translateX(0);
-  }
 }
 
 .txt_container h5 {

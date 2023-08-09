@@ -11,19 +11,6 @@
   top: 30%;
   left: 10vw;
   text-transform: uppercase;
-  animation-name: animateTxt;
-  animation-duration: 1s;
-}
-
-@keyframes animateTxt {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 100;
-    transform: translateX(0);
-  }
 }
 
 .txt_container h5 {
