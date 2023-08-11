@@ -1,20 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-/* @font-face {
-  font-family: 'AvenirBlack';
-  src: url('/assets/fonts/Avenir-Black.ttf');
-} */
-
-:root {
-  --blue: #00c2cb;
-}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: AvenirBlack; */
-  /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  /* font-family: "Righteous", cursive!important; */
 }
 
 body {
