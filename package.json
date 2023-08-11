@@ -26,7 +26,6 @@
     "nextjs-progressbar": "^0.0.14",
     "pdfjs-dist": "^2.14.305",
     "react": "^18.2.0",
-    "react-animated-progress-bar": "^1.1.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-intersection-observer": "^9.3.4",
