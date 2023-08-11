@@ -1,6 +1,5 @@
-import { chakra, shouldForwardProp } from "@chakra-ui/react";
-import { Variants, motion, isValidMotionProp } from "framer-motion";
-import { ReactNode } from "react";
+import { Variants, motion } from "framer-motion";
+import style from "./TypewriterEffect.module.css";
 
 // NOTE: Make sure to just add elements and br only
 // make sure no comment in the children
@@ -9,35 +8,35 @@ type Props = {
   children: Array<JSX.Element>;
 };
 
+const sentence: Variants = {
+  hidden: { display: "initial" },
+  visible: {
+    display: "initial",
+    transition: {
+      delay: 0.5,
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const letter: Variants = {
+  hidden: {
+    display: "none",
+    y: 50,
+  },
+  visible: {
+    display: "initial",
+    y: 0,
+  },
+};
+
 const TypewriterEffect = ({ children }: Props) => {
   const ChakraCursor = motion(children.slice(-1)[0].type);
 
-  const sentence: Variants = {
-    hidden: { display: "initial" },
-    visible: {
-      display: "initial",
-      transition: {
-        delay: 0.5,
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const letter: Variants = {
-    hidden: {
-      display: "none",
-      y: 50,
-    },
-    visible: {
-      display: "initial",
-      y: 0,
-    },
-  };
-
   return (
-    <>
+    <div className={style.TypewriterEffect}>
       <motion.div
-        className="home-title-message"
+        className="headline-title"
         variants={sentence}
         initial="hidden"
         animate="visible"
@@ -46,7 +45,7 @@ const TypewriterEffect = ({ children }: Props) => {
           const MotionComponent = motion(component.type);
 
           return (
-            <span style={component.props.style}>
+            <span style={component.props.style} key={componentIndex}>
               {component.type !== "br" ? (
                 component.props.children.split("").map((char, index) => {
                   return (
@@ -79,18 +78,16 @@ const TypewriterEffect = ({ children }: Props) => {
           variants={{
             hidden: {
               display: "initial",
-              y: 50,
             },
             visible: {
               display: "initial",
-              y: 0,
             },
           }}
         >
           |
         </ChakraCursor>
       </motion.div>
-    </>
+    </div>
   );
 };
 
