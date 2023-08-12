@@ -10,6 +10,7 @@ import { Stack } from "@chakra-ui/react";
 import SkillCard from "../components/data_display/SkillCard";
 import { Container } from "@chakra-ui/react";
 import SkillSet from "../models/skill";
+import HeadlineCard from "../components/data_display/HeadlineCard";
 
 const tech_logos = "/assets/images/tech_logos";
 
@@ -107,20 +108,18 @@ function skills() {
       />
 
       <Navbar active={NAVBAR_ITEMS.Skills} />
-      <div className={s.texts_container}>
-        <div className={s.txt_container}>
+      <Container maxW="container.xl" height="100vh" position="relative">
+        <HeadlineCard lineHeight="1.2em">
           <h4>
-            Skills I{" "}
-            <span style={{ fontSize: "1.7em", color: "#00c2cb" }}>
-              Gained and learned
-            </span>
-            <span style={{ fontSize: "1.7em" }}> in my course</span> and
-            <span style={{ fontSize: "1.7em" }}> self study</span>{" "}
+            Skills I{/* prettier-ignore */}
+            <span style={{ fontSize: "1.7em", color: "#00c2cb" }}> Gained and learned </span>
           </h4>
-        </div>
+          <span style={{ fontSize: "1.7em" }}> in my course</span>
+          <span style={{ fontSize: "1.7em" }}>and self study</span>
+        </HeadlineCard>
         <MyPic />
         <ScrollDown />
-      </div>
+      </Container>
       <Container maxW="2xl" centerContent>
         <Stack
           width={{ lg: "900px", md: "700px", sm: "400px", base: "300px" }}

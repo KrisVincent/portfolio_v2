@@ -4,39 +4,40 @@ import InternshipContainer from "../components/InternshipContainer";
 import MyPic from "../components/MyPic";
 import Navbar from "../components/Navbar";
 import ScrollDown from "../components/ScrollDown";
-import s from "../styles/Internship.module.css";
 import { NAVBAR_ITEMS } from "../enums";
+import { Container } from "@chakra-ui/react";
+import HeadlineCard from "../components/data_display/HeadlineCard";
 
 const experiences = [];
 
 function certificates() {
   return (
-    <div className={s.Internship}>
+    <>
       <Head>
         <title>Experience | Jeremiah Valencia</title>
         <meta name="description" content="Internship Jeremiah Valencia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar active={NAVBAR_ITEMS.Experience} />
-
-      <div className={s.texts_container}>
-        <div className={s.txt_container}>
-          <h4>
-            I have <span style={{ fontSize: "1.5em" }}>12 Months</span>{" "}
-            Experience at{" "}
-            <span style={{ color: "#00C2CB", fontSize: "1.5em" }}>
-              {" "}
-              Elgada BPO Solutions
-            </span>{" "}
-            as a <br></br>
-            <span style={{ color: "#00C2CB", fontSize: "1.5em" }}>
-              Full Stack Developer
-            </span>
-          </h4>
-        </div>
+      <Container maxW="container.xl" height="100vh" position="relative">
+        <HeadlineCard lineHeight="1.4em">
+          <h3>
+            I have
+            {/* prettier-ignore */}
+            <span style={{fontSize: '2em'}}> 12 Months </span>
+            Experience at
+          </h3>
+          <br />
+          <h3>
+            <span style={{ fontSize: "2em" }}> Elgada BPO Solutions </span> as a
+          </h3>
+          <br />
+          <h1 style={{ color: "#00C2CB" }}>Full Stack Developer</h1>
+        </HeadlineCard>
         <MyPic />
         <ScrollDown />
-      </div>
+      </Container>
+
       <InternshipContainer
         title="Junior Full Stack Developer"
         sidetitle="Elgada BPO Solutions Inc."
@@ -70,7 +71,7 @@ function certificates() {
         imgSrc="/assets/images/internship/hris.jpg"
         bgColor="#01102b"
       />
-    </div>
+    </>
   );
 }
 

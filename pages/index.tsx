@@ -1,36 +1,38 @@
 import Head from "next/head";
-import Image from "next/image";
 import Navbar from "../components/Navbar";
 import MyPic from "../components/MyPic";
-// const mypic = require("../components/MyPic");
-import s from "../styles/Home.module.css";
-// import AnimatedText from "react-animated-text-content";
 import MyPicMini from "../components/MyPicMini";
 import { NAVBAR_ITEMS } from "../enums";
+import HeadlineCard from "../components/data_display/HeadlineCard";
+import { Container } from "@chakra-ui/react";
 
 export default function Home() {
-  // MyPic.map((i) => console.log(i));
-
   return (
-    <div className={s.Home}>
+    <>
       <Head>
         <title>Portfolio | Jeremiah Valencia</title>
-        <meta name="description" content="Home Jeremiah Valencia" />
+        <meta name="description" content="Portfolio Jeremiah Valencia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Navbar active={NAVBAR_ITEMS.Home} />
-      <MyPicMini />
-      <div className={s.txt_container}>
-        <h5>&nbsp;&nbsp;Hello, I am</h5>
-        <h1>Jeremiah Valencia</h1>
-        <br></br>
-        <br></br>
-        <h3>Full Stack Developer</h3>
-      </div>
-
-      <MyPic />
-      {/* {mypic.default()} */}
-    </div>
+      <Container maxW="container.xl">
+        {/* fix myPicMini next */}
+        <MyPicMini />
+        <HeadlineCard>
+          <h3>&nbsp;Hello, I am</h3>
+          <h1
+            style={{
+              fontSize: "1.7em",
+              lineHeight: ".5em",
+            }}
+          >
+            Jeremiah Valencia
+          </h1>
+          <br></br>
+          <h1>Full Stack Developer</h1>
+        </HeadlineCard>
+        <MyPic />
+      </Container>
+    </>
   );
 }
