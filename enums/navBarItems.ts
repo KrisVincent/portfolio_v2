@@ -5,7 +5,6 @@ enum NAVBAR_ITEMS {
   Experience = "experience",
   Certificates = "certificates",
   Skills = "skills",
-  Contact = "contact",
 }
 
 export default NAVBAR_ITEMS;
