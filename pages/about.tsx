@@ -15,8 +15,8 @@ function about() {
         meta={{ content: `${capitalize(NAVBAR_ITEMS.About)} heremyas` }}
       />
       <Navbar active={NAVBAR_ITEMS.About} />
-      <Container maxW="container.xl">
-        <HeadlineCard animationSpeed={0.05} lineHeight="1.2em">
+      <Container maxW="container.xl" height="100vh" position="relative">
+        <HeadlineCard animationSpeed={0.02} lineHeight="1.2em">
           <h3>
             I am a <span style={{ fontSize: "1.7em" }}>Computer Engineer </span>
           </h3>
@@ -32,7 +32,6 @@ function about() {
           <br></br>
           <h3>Apart from coding, I shred my guitar during breaktimes.</h3>
         </HeadlineCard>
-
         <MyPic />
       </Container>
     </>
