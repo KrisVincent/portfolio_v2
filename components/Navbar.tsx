@@ -16,6 +16,7 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  Collapse,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { COLORS, NAVBAR_ITEMS } from "../enums";
@@ -72,8 +73,7 @@ export default function Navbar({ active }) {
           </HStack>
         </HStack>
       </Flex>
-
-      {isOpen ? (
+      <Collapse in={isOpen} animateOpacity>
         <Box pb={4} display={{ md: "none" }}>
           <Stack as={"nav"} spacing={4}>
             {Links.map((link) => (
@@ -81,7 +81,7 @@ export default function Navbar({ active }) {
             ))}
           </Stack>
         </Box>
-      ) : null}
+      </Collapse>
     </Box>
   );
 }
