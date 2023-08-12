@@ -1,38 +1,36 @@
-import Head from "next/head";
 import React from "react";
 import MyPic from "../components/MyPic";
 import Navbar from "../components/Navbar";
 import ProjectContainer from "../components/ProjectContainer";
 import ScrollDown from "../components/ScrollDown";
-import s from "../styles/Projects.module.css";
-import { NAVBAR_ITEMS } from "../enums";
+import { COLORS, NAVBAR_ITEMS } from "../enums";
 import capitalize from "../utils/capitalize";
+import { Head } from "../components";
+import { Container } from "@chakra-ui/react";
+import HeadlineCard from "../components/data_display/HeadlineCard";
 
 function projects() {
   const tech_logos = "/assets/images/tech_logos";
   return (
-    <div className={s.Projects}>
-      <Head>
-        <title>{`${capitalize(
-          NAVBAR_ITEMS.Projects
-        )} | Jeremiah Valencia`}</title>
-        <meta name="description" content="Projects Jeremiah Valencia" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <Head
+        title={`${capitalize(NAVBAR_ITEMS.Projects)} | Jeremiah Valencia`}
+        meta={{ content: `${capitalize(NAVBAR_ITEMS.Projects)} heremyas` }}
+      />
       <Navbar active={NAVBAR_ITEMS.Projects} />
-      <div className={s.texts_container}>
-        <div className={s.txt_container}>
+      <Container maxW="container.xl" height="100vh" position="relative">
+        <HeadlineCard lineHeight="1.2em">
           <h4>
-            List of{" "}
-            <span style={{ fontSize: "1.7em", color: "#00c2cb" }}>
-              projects
-            </span>
-            <span style={{ fontSize: "1.7em" }}> i have proudly created</span>{" "}
+            List of
+            {/* prettier-ignore */}
+            <span style={{ color: COLORS.Blue, fontSize: '2em' }}> projects </span>
           </h4>
-        </div>
+          <br />
+          <h2>i have proudly created</h2>
+        </HeadlineCard>
         <MyPic />
         <ScrollDown />
-      </div>
+      </Container>
 
       <ProjectContainer
         title="heremyas.me"
@@ -118,7 +116,7 @@ function projects() {
           `${tech_logos}/trefle.png`,
         ]}
       />
-    </div>
+    </>
   );
 }
 

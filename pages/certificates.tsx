@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar";
 import ScrollDown from "../components/ScrollDown";
 import s from "../styles/Certificates.module.css";
 import { NAVBAR_ITEMS } from "../enums";
+import { Container } from "@chakra-ui/react";
+import HeadlineCard from "../components/data_display/HeadlineCard";
 
 function certificates() {
   return (
@@ -17,25 +19,21 @@ function certificates() {
       </Head>
       <Navbar active={NAVBAR_ITEMS.Certificates} />
 
-      <div className={s.texts_container}>
-        <div className={s.txt_container}>
+      <Container maxW="container.xl" height="100vh" position="relative">
+        <HeadlineCard>
+          <h1>
+            My <span>Certificates</span>
+          </h1>
+          <br />
           <h3>
-            My{" "}
-            <span style={{ color: "#00c2cb", fontSize: "1.7em" }}>
-              Certificates
-            </span>
+            <span style={{ color: "#00c2cb", fontSize: "1.5em" }}>11 </span>
+            Seminars/ Webinars Attended
           </h3>
-          <br></br>
-          <br></br>
-          <br></br>
-          <h3>
-            <span style={{ color: "#00c2cb", fontSize: "1.5em" }}>11</span>{" "}
-            Seminars/Webinars Attended
-          </h3>
-        </div>
+        </HeadlineCard>
         <MyPic />
         <ScrollDown />
-      </div>
+      </Container>
+
       <CertificateContainer
         organizer="maxim integrated"
         title="Boost Converters"
