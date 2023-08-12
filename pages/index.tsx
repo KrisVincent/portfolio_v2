@@ -15,10 +15,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar active={NAVBAR_ITEMS.Home} />
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" height="100vh" position="relative">
         {/* fix myPicMini next */}
         <MyPicMini />
-        <HeadlineCard>
+        <HeadlineCard marginTop={{ base: "8vh", lg: "0" }}>
           <h3>&nbsp;Hello, I am</h3>
           <h1
             style={{

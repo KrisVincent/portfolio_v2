@@ -12,9 +12,9 @@ function HeadlineCard({ animationSpeed, children, ...style }: CardProps) {
     <Card
       {...style}
       w={{ lg: "50%" }}
-      pos={{ lg: "absolute" }}
-      textAlign="left"
+      position="absolute"
       top="30%"
+      textAlign="left"
       textTransform="uppercase"
       backgroundColor="none"
       color="white"
