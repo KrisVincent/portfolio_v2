@@ -27,7 +27,7 @@ function about() {
             scratch.
           </h3>
           {/* prettier-ignore  */}
-          <h3 style={{ color: "#00C2CB", fontSize: '1.7em', lineHeight: '1.1em'}}> When it's my free time, I code, when it's not, I still code.</h3>
+          <h3 style={{ color: "#00C2CB", fontSize: '1.7em', lineHeight: '1.1em'}}>{` When it's my free time, I code, when it's not, I still code.`}</h3>
           <br></br>
           <br></br>
           <h3>Apart from coding, I shred my guitar during breaktimes.</h3>
