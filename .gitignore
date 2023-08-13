@@ -33,3 +33,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# temporary secret file will change to env later on
+secret
+
+# backup for ArticleItem.tsx content
+components/blog/ArticleItem.tsx
