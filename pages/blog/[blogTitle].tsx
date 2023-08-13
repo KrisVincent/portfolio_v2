@@ -51,6 +51,8 @@ function Blog({ article }) {
     title,
   }: ArticleType = article;
 
+  const bodyColor = useColorModeValue("gray.200", "gray.700");
+
   if (!article) {
     return null;
   }
@@ -110,12 +112,7 @@ function Blog({ article }) {
                 {title}
               </Text>
             </Heading>
-            <Text
-              as="p"
-              marginTop="2"
-              color={useColorModeValue("gray.200", "gray.700")}
-              fontSize="lg"
-            >
+            <Text as="p" marginTop="2" color={bodyColor} fontSize="lg">
               {...body}
             </Text>
             <ArticleItemAuthor name={author} date={new Date(datePublished)} />
