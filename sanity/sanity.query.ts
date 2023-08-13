@@ -19,7 +19,7 @@ export async function getArticle(slug) {
 
 export async function getArticles() {
   return client.fetch(
-    groq`*[_type == "post"] {
+    groq`*[_type == "post"] | order(publishedAt desc) {
       _id,
       title,
       "body": body[].children[].text,
@@ -34,7 +34,7 @@ export async function getArticles() {
 }
 
 export async function getLatestArticles() {
-  const itemsCount = 2;
+  const itemsCount = 3;
 
   return client.fetch(
     groq`*[_type == "post"] | order(publishedAt desc) [0...${itemsCount}]{
