@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
   const pinnedArticle = pinnedArticleArray[0];
   const articles = await getArticles();
 
-  return { props: { latestArticles, pinnedArticle, articles } };
+  return { props: { latestArticles, pinnedArticle, articles }, revalidate: 1 };
 };
 
 function Blogs({ latestArticles, pinnedArticle, articles }) {
