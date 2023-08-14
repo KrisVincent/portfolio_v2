@@ -22,7 +22,7 @@ const ArticleItemPinnedCard = ({
   _id,
 }: Omit<ArticleType, "isPinned">) => {
   return (
-    <Link href={`/blog/${slug}`} isExternal>
+    <Link href={`/blog/${slug}`}>
       <Box
         marginTop={{ base: "1", sm: "5" }}
         display="flex"

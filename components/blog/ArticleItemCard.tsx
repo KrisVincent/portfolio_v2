@@ -23,7 +23,7 @@ const ArticleItemCard = ({
   slug,
 }: ArticleType) => {
   return (
-    <Link href={`/blog/${slug}`} isExternal>
+    <Link href={`/blog/${slug}`}>
       <Box w="100%">
         <Box borderRadius="lg" overflow="hidden">
           <Box textDecoration="none" _hover={{ textDecoration: "none" }}>
