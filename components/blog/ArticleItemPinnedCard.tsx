@@ -22,17 +22,17 @@ const ArticleItemPinnedCard = ({
   _id,
 }: Omit<ArticleType, "isPinned">) => {
   return (
-    <Link href={`/blog/${slug}`} isExternal>
+    <Link href={`/blog/${slug}`}>
       <Box
         marginTop={{ base: "1", sm: "5" }}
         display="flex"
-        flexDirection={{ base: "column", sm: "row" }}
+        flexDirection={{ base: "column", lg: "row" }}
         justifyContent="space-between"
       >
         <Box
           display="flex"
           flex="1"
-          marginRight="12"
+          marginRight={{ base: "0", lg: "12" }}
           position="relative"
           alignItems="center"
         >
@@ -42,6 +42,8 @@ const ArticleItemPinnedCard = ({
             zIndex="2"
             // marginLeft={{ base: "0", sm: "5%" }}
             marginTop="5%"
+            display={"flex"}
+            justifyContent={"center"}
           >
             <Box textDecoration="none" _hover={{ textDecoration: "none" }}>
               <Image
@@ -53,16 +55,16 @@ const ArticleItemPinnedCard = ({
             </Box>
           </Box>
           {/* <Box zIndex="1" width="100%" position="absolute" height="100%">
-          <Box
-            bgGradient={useColorModeValue(
-              "radial(orange.600 1px, transparent 1px)",
-              "radial(orange.300 1px, transparent 1px)"
-            )}
-            backgroundSize="20px 20px"
-            opacity="0.4"
-            height="100%"
-          />
-        </Box> */}
+            <Box
+              bgGradient={useColorModeValue(
+                "linear(teal 3px, transparent 1px)",
+                "linear(teal 3px, transparent 1px)"
+              )}
+              backgroundSize="10px 20px"
+              opacity=".2"
+              height="100%"
+            />
+          </Box> */}
         </Box>
         <Box
           display="flex"

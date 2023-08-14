@@ -23,7 +23,7 @@ const ArticleItemCard = ({
   slug,
 }: ArticleType) => {
   return (
-    <Link href={`/blog/${slug}`} isExternal>
+    <Link href={`/blog/${slug}`}>
       <Box w="100%">
         <Box borderRadius="lg" overflow="hidden">
           <Box textDecoration="none" _hover={{ textDecoration: "none" }}>
@@ -40,9 +40,7 @@ const ArticleItemCard = ({
             />
           </Box>
         </Box>
-        <Box marginTop={3}>
-          <ArticleItemTag tags={tags} />
-        </Box>
+        <ArticleItemTag tags={tags} />
         <Heading fontSize="xl" marginTop="2">
           <Text textDecoration="none" _hover={{ textDecoration: "none" }}>
             {title}

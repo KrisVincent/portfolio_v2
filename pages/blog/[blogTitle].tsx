@@ -7,7 +7,6 @@ import {
   Box,
   Image,
   useColorModeValue,
-  Spacer,
 } from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import BlogNav from "../../components/blog/BlogNav";
@@ -104,16 +103,24 @@ function Blog({ article }) {
             // marginTop={{ base: "3", sm: "0" }}
             marginBottom={10}
           >
-            <Box marginTop={{ base: 3, sm: 5 }}>
-              <ArticleItemTag tags={["Test"]} />
-            </Box>
+            <ArticleItemTag tags={tags} />
             <Heading marginTop="1">
               <Text textDecoration="none" _hover={{ textDecoration: "none" }}>
                 {title}
               </Text>
             </Heading>
             <Text as="p" marginTop="2" color={bodyColor} fontSize="lg">
-              {...body}
+              {body.map((item, index) => {
+                if (item === "") {
+                  return <br key={index} />;
+                }
+                return (
+                  <span key={index}>
+                    {item}
+                    <br />
+                  </span>
+                );
+              })}
             </Text>
             <ArticleItemAuthor name={author} date={new Date(datePublished)} />
           </Box>

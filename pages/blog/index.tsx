@@ -29,7 +29,7 @@ function Blogs({ latestArticles, pinnedArticle, articles }) {
     <>
       <Head title="Blogs | heremyas" meta={{ content: "Blogs heremyas" }} />
       <BlogNav />
-      <Container maxW="container.lg" p="50px 0">
+      <Container maxW="container.lg" paddingTop="50px">
         <Heading as="h1">📌 Pinned Article</Heading>
         <ArticleItemPinnedCard
           datePublished={pinnedArticle.datePublished}
@@ -44,7 +44,15 @@ function Blogs({ latestArticles, pinnedArticle, articles }) {
         <Heading as="h2" marginTop="10" marginBottom="10">
           Latest Articles
         </Heading>
-        <Grid templateColumns="repeat(3, 1fr)" gap={10}>
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
+          gap={10}
+        >
           {latestArticles.map((article: ArticleType) => (
             <GridItem key={article._id}>
               <ArticleItemCard
