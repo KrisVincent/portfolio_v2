@@ -40,9 +40,7 @@ const ArticleItemCard = ({
             />
           </Box>
         </Box>
-        <Box marginTop={3}>
-          <ArticleItemTag tags={tags} />
-        </Box>
+        <ArticleItemTag tags={tags} />
         <Heading fontSize="xl" marginTop="2">
           <Text textDecoration="none" _hover={{ textDecoration: "none" }}>
             {title}

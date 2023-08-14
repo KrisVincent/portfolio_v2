@@ -19,7 +19,11 @@ export default function BlogNav() {
   return (
     <>
       <Box bg={useColorModeValue("gray.900", "gray.100")} px={4}>
-        <Container maxW={"container.md"}>
+        <Container
+          maxW={"container.md"}
+          paddingLeft={{ base: "0", lg: "16px" }}
+          paddingRight={{ base: "0", lg: "16px" }}
+        >
           <Flex
             h={16}
             alignItems={"center"}
@@ -30,6 +34,7 @@ export default function BlogNav() {
                 bg="teal"
                 color={"white"}
                 onClick={() => router.push("/blog")}
+                fontSize={"sm"}
               >
                 <FiArrowLeft />
                 &nbsp;Back To The Stories

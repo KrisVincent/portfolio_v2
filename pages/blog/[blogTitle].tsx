@@ -103,24 +103,22 @@ function Blog({ article }) {
             // marginTop={{ base: "3", sm: "0" }}
             marginBottom={10}
           >
-            <Box marginTop={{ base: 3, sm: 5 }}>
-              <ArticleItemTag tags={tags} />
-            </Box>
+            <ArticleItemTag tags={tags} />
             <Heading marginTop="1">
               <Text textDecoration="none" _hover={{ textDecoration: "none" }}>
                 {title}
               </Text>
             </Heading>
             <Text as="p" marginTop="2" color={bodyColor} fontSize="lg">
-              {body.map((item) => {
+              {body.map((item, index) => {
                 if (item === "") {
-                  return <br />;
+                  return <br key={index} />;
                 }
                 return (
-                  <>
+                  <span key={index}>
                     {item}
                     <br />
-                  </>
+                  </span>
                 );
               })}
             </Text>
