@@ -17,6 +17,9 @@ import {
   useColorModeValue,
   Stack,
   Collapse,
+  Tag,
+  Image,
+  Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { COLORS, NAVBAR_ITEMS } from "../enums";
@@ -52,7 +55,7 @@ export default function Navbar({ active }) {
 
   return (
     <Box px={4}>
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Flex h={"100px"} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -65,7 +68,60 @@ export default function Navbar({ active }) {
           _active={{ color: COLORS.Blue }}
         />
         <HStack spacing={8} alignItems={"center"}>
-          <Box>heremyas.com</Box>
+          {/* <Box>heremyas.com</Box> */}
+          <Box pos={"relative"}>
+            <Box
+              display={"flex"}
+              flexDir={"column"}
+              pos={"absolute"}
+              zIndex={1}
+              top={"-20px"}
+              right={"-8px"}
+              height={"35px"}
+              justifyContent={"end"}
+              overflow={"hidden"}
+              borderBottomWidth={"3px"}
+              borderLeftWidth={"3px"}
+              borderRightWidth={"3px"}
+              borderColor={"#121212"}
+              borderRadius={"xl"}
+              borderStyle={"solid"}
+            >
+              <Box
+                width={"45px"}
+                pos={"absolute"}
+                left={-1}
+                // bottom={"20px"}
+                top={-1}
+                zIndex={-1}
+              >
+                <Image
+                  src="https://media.tenor.com/X1ywH8zY6B0AAAAi/fire-lit.gif"
+                  width={"47px"}
+                  height={"20px"}
+                />
+              </Box>
+              <Tag
+                width="fit-content"
+                size={"sm"}
+                variant="solid"
+                backgroundColor="#E53301"
+                fontSize={"xx-small"}
+                borderTopRadius={"none"}
+              >
+                NEW
+              </Tag>
+            </Box>
+            <Link href="/blog">
+              <Button
+                border={"solid"}
+                colorScheme="teal"
+                backgroundColor={"transparent"}
+              >
+                Visit My Blog
+              </Button>
+            </Link>
+          </Box>
           <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
             {Links.map((link) => (
               <NavLink key={link} active={active} value={link} />
