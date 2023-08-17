@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import MyPic from "../components/MyPic";
 import MyPicMini from "../components/MyPicMini";
 import { NAVBAR_ITEMS } from "../enums";
-import HeadlineCard from "../components/data_display/HeadlineCard";
+import HeadlineCard from "../components/data-display/HeadlineCard";
 import { Container } from "@chakra-ui/react";
 
 export default function Home() {

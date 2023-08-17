@@ -1,4 +1,5 @@
 import React, { CSSProperties } from "react";
+import Image from "./data-display/Image";
 
 const scrollDownContainerStyle: CSSProperties = {
   position: "absolute",
@@ -13,10 +14,10 @@ function ScrollDown() {
   return (
     <div style={scrollDownContainerStyle}>
       <div style={{ height: "50px" }}>
-        <img
+        <Image
           style={{ height: "100%" }}
           src={"assets/gif/scroll_down.gif"}
-        ></img>
+        ></Image>
       </div>
     </div>
   );

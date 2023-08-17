@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import ScrollDown from "../components/ScrollDown";
 import { NAVBAR_ITEMS } from "../enums";
 import { Container } from "@chakra-ui/react";
-import HeadlineCard from "../components/data_display/HeadlineCard";
+import HeadlineCard from "../components/data-display/HeadlineCard";
 
 const experiences = [];
 

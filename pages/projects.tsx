@@ -7,7 +7,7 @@ import { COLORS, NAVBAR_ITEMS } from "../enums";
 import capitalize from "../utils/capitalize";
 import { Head } from "../components";
 import { Container } from "@chakra-ui/react";
-import HeadlineCard from "../components/data_display/HeadlineCard";
+import HeadlineCard from "../components/data-display/HeadlineCard";
 
 function projects() {
   const tech_logos = "/assets/images/tech_logos";

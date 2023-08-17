@@ -1,6 +1,7 @@
 import React from "react";
 import s from "../styles/ProjectContainer.module.css";
 import NewLineText from "./NewLineText";
+import Image from "./data-display/Image";
 
 type Props = {
   imgSrc: string;
@@ -76,14 +77,14 @@ function ProjectContainer({
           <div className={s.logo_container}>
             {logoSrcs.map((logo, index) => (
               <div key={index} className={s.logoItemContainer}>
-                <img src={logo}></img>
+                <Image alt="heremyas | Jeremiah Valencia" src={logo} />
               </div>
             ))}
           </div>
         </div>
       </div>
       <div className={s.img_container}>
-        <img src={imgSrc} />
+        <Image alt="heremyas | Jeremiah Valencia" src={imgSrc} />
       </div>
     </div>
   );

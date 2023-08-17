@@ -7,10 +7,10 @@ import SkillBar from "../components/SkillBar";
 import { NAVBAR_ITEMS } from "../enums";
 import capitalize from "../utils/capitalize";
 import { Stack } from "@chakra-ui/react";
-import SkillCard from "../components/data_display/SkillCard";
+import SkillCard from "../components/data-display/SkillCard";
 import { Container } from "@chakra-ui/react";
 import SkillSet from "../models/skill";
-import HeadlineCard from "../components/data_display/HeadlineCard";
+import HeadlineCard from "../components/data-display/HeadlineCard";
 
 const tech_logos = "/assets/images/tech_logos";
 

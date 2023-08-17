@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { NAVBAR_ITEMS } from "../enums";
 import { Head } from "../components";
 import capitalize from "../utils/capitalize";
-import HeadlineCard from "../components/data_display/HeadlineCard";
+import HeadlineCard from "../components/data-display/HeadlineCard";
 import { Container } from "@chakra-ui/react";
 
 function about() {

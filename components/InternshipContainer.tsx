@@ -1,6 +1,7 @@
 import React from "react";
 import s from "../styles/InternshipContainer.module.css";
 import NewLineText from "./NewLineText";
+import Image from "./data-display/Image";
 
 type Props = {
   imgSrc: string;
@@ -34,7 +35,7 @@ function InternshipContainer({
         {/* <a className={s.try} href={projectLink} target='_blank' rel="noreferrer">Click to try</a> */}
       </div>
       <div className={s.img_container}>
-        <img src={imgSrc} />
+        <Image alt="heremyas | Jeremiah Valencia" src={imgSrc} />
       </div>
     </div>
   );

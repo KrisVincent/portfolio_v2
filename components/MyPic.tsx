@@ -1,13 +1,20 @@
 import React from "react";
-import s from "./MyPic.module.css";
+import { Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 function MyPic() {
   return (
-    <div className={s.img_container}>
-      <div>
-        <img src="/assets/images/heremyas.png" />
-      </div>
-    </div>
+    <Box overflow={"hidden"} pos={"relative"} h={"92vh"} zIndex={"-1"}>
+      <Image
+        alt="heremyas | Jeremiah Valencia"
+        src="/assets/images/heremyas.png"
+        objectFit={"contain"}
+        pos={"absolute"}
+        h={"100%"}
+        right={0}
+        display={{ base: "none", lg: "block" }}
+      />
+    </Box>
   );
 }
 
