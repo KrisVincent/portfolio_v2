@@ -8,6 +8,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { isEmpty } from "lodash";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { FiArrowLeft } from "react-icons/fi";
@@ -30,15 +31,17 @@ export default function BlogNav() {
             justifyContent={!isInBlogPage ? "space-between" : "center"}
           >
             {!isInBlogPage && (
-              <Button
-                bg="teal"
-                color={"white"}
-                onClick={() => router.push("/blog")}
-                fontSize={"sm"}
-              >
-                <FiArrowLeft />
-                &nbsp;Back To The Stories
-              </Button>
+              <Link href="/blog">
+                <Button
+                  bg="teal"
+                  color={"white"}
+                  onClick={() => {}}
+                  fontSize={"sm"}
+                >
+                  <FiArrowLeft />
+                  &nbsp;Back To The Stories
+                </Button>
+              </Link>
             )}
             <Box>heremyas blog</Box>
           </Flex>

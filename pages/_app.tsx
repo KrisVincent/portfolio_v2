@@ -1,15 +1,20 @@
 import "../styles/globals.css";
 import NextNProgress from "nextjs-progressbar";
 import { Analytics } from "@vercel/analytics/react";
-// import localFont from "next/font/local";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Colors, Theme, ThemeOverride } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 
-// const defaultFont = localFont({
-//   src: "../public/assets/fonts/Avenir-Black.ttf",
-// });
+type ThemeConfig = {
+  fonts: {
+    heading: string;
+    body: string;
+  };
+  colors: {
+    blue: string;
+  };
+};
 
-const theme = extendTheme({
+const themeConfig: ThemeConfig = {
   fonts: {
     heading: `"Avenir Next", "Helvetica"`,
     body: `"Avenir Next", "Helvetica"`,
@@ -17,7 +22,9 @@ const theme = extendTheme({
   colors: {
     blue: "#00c2cb",
   },
-});
+};
+
+const theme = extendTheme(themeConfig);
 
 function MyApp({ Component, pageProps }) {
   return (
