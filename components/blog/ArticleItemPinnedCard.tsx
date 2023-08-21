@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Heading,
@@ -7,6 +9,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React from "react";
+import NextLink from "next/link";
 import ArticleItemTag from "./ArticleItemTag";
 import ArticleItemAuthor from "./ArticleItemAuthor";
 import ArticleType from "../../types/articleType";
@@ -22,20 +25,20 @@ const ArticleItemPinnedCard = ({
   _id,
 }: Omit<ArticleType, "isPinned">) => {
   return (
-    <Link href={`/blog/${slug}`}>
+    <Box
+      marginTop={{ base: "1", sm: "5" }}
+      display="flex"
+      flexDirection={{ base: "column", lg: "row" }}
+      justifyContent="space-between"
+    >
       <Box
-        marginTop={{ base: "1", sm: "5" }}
         display="flex"
-        flexDirection={{ base: "column", lg: "row" }}
-        justifyContent="space-between"
+        flex="1"
+        marginRight={{ base: "0", lg: "12" }}
+        position="relative"
+        alignItems="center"
       >
-        <Box
-          display="flex"
-          flex="1"
-          marginRight={{ base: "0", lg: "12" }}
-          position="relative"
-          alignItems="center"
-        >
+        <Link as={NextLink} href={`/blog/${slug}`}>
           <Box
             // width={{ base: "100%", sm: "85%" }}
             width="100%"
@@ -54,7 +57,8 @@ const ArticleItemPinnedCard = ({
               />
             </Box>
           </Box>
-          {/* <Box zIndex="1" width="100%" position="absolute" height="100%">
+        </Link>
+        {/* <Box zIndex="1" width="100%" position="absolute" height="100%">
             <Box
               bgGradient={useColorModeValue(
                 "linear(teal 3px, transparent 1px)",
@@ -65,32 +69,39 @@ const ArticleItemPinnedCard = ({
               height="100%"
             />
           </Box> */}
-        </Box>
-        <Box
-          display="flex"
-          flex="1"
-          flexDirection="column"
-          justifyContent="center"
-          marginTop={{ base: "3", sm: "0" }}
-        >
-          <ArticleItemTag tags={tags} />
-          <Heading marginTop="1">
-            <Text textDecoration="none" _hover={{ textDecoration: "none" }}>
-              {title}
-            </Text>
-          </Heading>
-          <Text
-            as="p"
-            marginTop="2"
-            color={useColorModeValue("gray.200", "gray.700")}
-            fontSize="lg"
-          >
-            {body[0]}
-          </Text>
-          <ArticleItemAuthor name={author} date={new Date(datePublished)} />
-        </Box>
       </Box>
-    </Link>
+
+      <Box
+        display="flex"
+        flex="1"
+        flexDirection="column"
+        justifyContent="center"
+        marginTop={{ base: "3", sm: "0" }}
+      >
+        <ArticleItemTag tags={tags} />
+        <Link as={NextLink} href={`/blog/${slug}`}>
+          <Box>
+            <Heading marginTop="1">
+              {/* <Text textDecoration="none" _hover={{ textDecoration: "none" }}> */}
+              {title}
+              {/* </Text> */}
+            </Heading>
+          </Box>
+          <Box>
+            <Text
+              as="p"
+              marginTop="2"
+              color={useColorModeValue("gray.200", "gray.700")}
+              fontSize="lg"
+            >
+              {body[0]}
+            </Text>
+          </Box>
+        </Link>
+        <ArticleItemAuthor name={author} date={new Date(datePublished)} />
+      </Box>
+    </Box>
+    // </Link>
   );
 };
 

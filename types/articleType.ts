@@ -1,3 +1,5 @@
+import { Category } from "../models";
+
 type ArticleType = {
   _id: string;
   title: string;
@@ -5,7 +7,7 @@ type ArticleType = {
   body: string[];
   author: string;
   datePublished: string;
-  tags: string[];
+  tags: Category[];
   thumbnailSrc: string;
 };
 

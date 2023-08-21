@@ -15,6 +15,9 @@ function generateSiteMap(articles: ArticleType[]) {
      <url>
        <loc>${url}/blog</loc>
      </url>
+     <url>
+       <loc>${url}/blog/heremyas</loc>
+     </url>
      ${navLinks
        .map((link) => {
          return `
