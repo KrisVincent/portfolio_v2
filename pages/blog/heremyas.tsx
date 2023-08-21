@@ -3,7 +3,6 @@ import BlogNav from "../../components/blog/BlogNav";
 import { Head } from "../../components";
 import {
   Box,
-  Image,
   Heading as ChakraHeading,
   Center,
   Container,
@@ -13,6 +12,7 @@ import {
   VStack,
   Divider,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 type Props = {};
 
@@ -78,9 +78,10 @@ const Body = () => {
           <Container>
             <Image
               src="/assets/images/header.jpg"
-              h={"100%"}
-              objectFit={"cover"}
-              borderRadius={"xl"}
+              alt="heremyas"
+              width={1920}
+              height={1080}
+              style={{ borderRadius: "1rem" }}
             />
           </Container>
         </Center>
@@ -92,7 +93,7 @@ const Body = () => {
 const Heading = () => {
   return (
     <Center h={"30vh"} w={"100%"}>
-      <ChakraHeading as={"h1"} size={"3xl"}>
+      <ChakraHeading as={"h1"} size={"3xl"} textAlign={"center"}>
         Who is heremyas?
       </ChakraHeading>
     </Center>
