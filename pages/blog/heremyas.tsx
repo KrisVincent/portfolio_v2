@@ -30,22 +30,22 @@ const More = () => {
           </Text>
           <br />
           <Text as={"cite"}>
-            `Life is unfair. But we have plenty of time to change everything we
-            don't like, to chase anything we desire, and to turn every dreams
-            into reality.`
+            {
+              "`Life is unfair. But we have plenty of time to change everything we don't like, to chase anything we desire, and to turn every dreams into reality.`"
+            }
           </Text>
           <br />
           <Text as={"cite"}>
-            `The more na mahirap ang isang bagay the more effort and work it
-            requires. I didn't just made it, it's the reality. Kaya WORK
-            HARDER.`
+            {
+              "`The more na mahirap ang isang bagay the more effort and work it requires. I didn't just made it, it's the reality. Kaya WORK HARDER.`"
+            }
           </Text>
           <br />
           <Text as={"cite"}>
-            `Ang bagay na madali, naging mahirap sa umpisa.`
+            {"`Ang bagay na madali, naging mahirap sa umpisa.`"}
           </Text>
           <br />
-          <Text as={"cite"}>`SA UNA LANG MAHIRAP`</Text>
+          <Text as={"cite"}>{"`SA UNA LANG MAHIRAP`"}</Text>
         </VStack>
       </Center>
     </Container>

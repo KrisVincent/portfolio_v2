@@ -10,11 +10,11 @@ import {
   getPinnedArticle,
 } from "../../sanity/sanity.query";
 import ArticleType from "../../types/articleType";
+import BlogGrid from "../../components/blog/BlogGrid";
 
 export const getStaticProps = async () => {
   const latestArticles = await getLatestArticles();
-  const pinnedArticleArray = await getPinnedArticle();
-  const pinnedArticle = pinnedArticleArray[0];
+  const pinnedArticle = await getPinnedArticle();
   const articles = await getArticles();
 
   return { props: { latestArticles, pinnedArticle, articles }, revalidate: 1 };
@@ -44,15 +44,7 @@ function Blogs({ latestArticles, pinnedArticle, articles }) {
         <Heading as="h2" marginTop="10" marginBottom="10">
           Latest Articles
         </Heading>
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            sm: "repeat(1, 1fr)",
-            md: "repeat(2, 1fr)",
-            lg: "repeat(3, 1fr)",
-          }}
-          gap={10}
-        >
+        <BlogGrid>
           {latestArticles.map((article: ArticleType) => (
             <GridItem key={article._id}>
               <ArticleItemCard
@@ -67,7 +59,7 @@ function Blogs({ latestArticles, pinnedArticle, articles }) {
               />
             </GridItem>
           ))}
-        </Grid>
+        </BlogGrid>
         <Heading as="h2" marginTop="10" marginBottom="10">
           Articles
         </Heading>

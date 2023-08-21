@@ -8,6 +8,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React from "react";
+import NextLink from "next/link";
 import ArticleItemTag from "./ArticleItemTag";
 import ArticleItemAuthor from "./ArticleItemAuthor";
 import ArticleType from "../../types/articleType";
@@ -23,7 +24,7 @@ const ArticleItemCard = ({
   slug,
 }: ArticleType) => {
   return (
-    <Link href={`/blog/${slug}`}>
+    <Link as={NextLink} href={`/blog/${slug}`} legacyBehavior>
       <Box w="100%">
         <Box borderRadius="lg" overflow="hidden">
           <Box textDecoration="none" _hover={{ textDecoration: "none" }}>
