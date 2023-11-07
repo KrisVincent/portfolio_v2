@@ -112,7 +112,7 @@ export default function Navbar({ active }) {
                 NEW
               </Tag>
             </Box>
-            <Link href="/blog">
+            <Link href="https://blog.heremyas.com">
               <Button
                 border={"solid"}
                 colorScheme="teal"
